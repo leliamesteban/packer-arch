@@ -13,3 +13,6 @@ echo -e 'vboxguest\nvboxsf\nvboxvideo' > /etc/modules-load.d/virtualbox.conf
 
 # Download all updates to optimize ansible playbook
 /usr/bin/pacman -Sywu
+
+# Install python2.7 for ansible
+/usr/bin/pacman -S --noconfirm python2
