@@ -59,12 +59,6 @@
             "script": "scripts/install-base.sh"
         },
         {
-            "only": ["parallels-iso"],
-            "type": "shell",
-            "execute_command": "{{ .Vars }} sudo -E -S bash '{{ .Path }}'",
-            "script": "scripts/install-parallels.sh"
-        },
-        {
             "only": ["virtualbox-iso"],
             "type": "shell",
             "execute_command": "{{ .Vars }} sudo -E -S bash '{{ .Path }}'",
@@ -74,12 +68,6 @@
             "type": "shell",
             "execute_command": "{{ .Vars }} sudo -E -S bash '{{ .Path }}'",
             "script": "scripts/cleanup.sh"
-        }
-    ],
-    "post-processors": [
-        {
-            "type": "vagrant",
-            "output": "output/packer_arch_{{ .Provider }}.box"
         }
     ]
 }
